@@ -6,6 +6,39 @@
 
 </span>
 
+General:
+--------
+- Какое ваше любимое приложение и почему?
+- Что такое парное программирование?
+- Что такое ограничивающая рамка (bounding box)?
+- Сколько есть API'шек для эффективного отслеживания местоположения?
+- Какое самое главное преимущество у Swift?
+- Что делает React Native специальным для iOS?
+- Что означает бритье Яка (Yak Shaving)?
+- Каковы пять основных практических рекомендаций для улучшения типографического качества (typographic quality) мобильных проектов?
+- Что такое управление зависимостями (Dependency Management)?
+- Что такое диаграммы классов UML?
+
+
+
+Programming:
+--------
+- Что такое `куча (heap)` и `стэк (stack)`? В какой памяти создаются объекты, примитивные типы и блоки?
+- Что такое `полиморфизм`?
+- Что такое `инкапсуляция`? Что такое `нарушение инкапсуляции`?
+- Чем `абстрактный класс` отличается от `интерфейса`?
+- Что такое сериализация объекта?
+- Что такое `регулярные выражения` (regular expression)?
+- Что такое `перегрузка операторов (operator overloading)`?
+- Что такое `указатель` (pointer)?
+- Что такое `функция` (function)?
+- Как передавать переменную как ссылку?
+- Что такое `класс`?
+- Что такое `объект`?
+- Что такое `интерфейс`?
+- Когда и почему мы используем объект вместо структур?
+
+
 Objective-C, Foundation:
 ------------------------
 - Что такое `свойство`?
@@ -57,28 +90,18 @@ Objective-C, Foundation:
 Memory Management:
 ------------------
 - Объявление свойств c атрибутами: `retain`, `assign`, `nonatomic`, `readonly`, `copy`, `weak`, `strong`, `unsafe_unretained`?
-- Реализуйте следующие методы: `retain/release/autorelease`?
-- Почему мы не используем strong для enum свойств?
 - Как происходит `ручное управление памятью - MRC` в iOS?
 - `autorelease vs release`?
 - Что означает `ARC`?
-- Что делать, если проект написан с использованием ARC, а нужно использовать классы сторонней библиотеки написанной без ARC?
 - `Atomic vs nonatomic`. Чем отличаются? Как вручную переопределить atomic/nonatomic сеттер в не ARC коде?
 - Вопрос о `циклах в графах владения` (retain cycle)? 
 - Как `использовать` self внутри блоков? Приведите пример `retain cycle` в блоке?
-- Зачем все свойства ссылающиеся на делегаты `strong для ARC и retain для MRC`? :))) 
 - Что такое `autorelease pool`?
 - Что такое `runLoop` `(NSAutoreleasePool)`, когда он используется? `(timers, nsurlconnection ...)`?
-- Как связаны `NSRunLoop и NSAutoreleasePool` на пальцах?
-- Как можно заимплементировать `autorelease pool на с++`?
-- Если я вызову `performSelector:withObject:afterDelay:` - объекту пошлется сообщение retain?
 - Как происходит обработка `memory warning`(предупреждение о малом  количестве памяти)? Зависит ли обработка от версии iOS, как мы должны их обрабатывать?
-- Напишите простую реализацию `NSAutoreleasePool` на Objective-C?
 - Когда нужно использовать метод `retainCount` (никогда, почему?) :)))
-- Что случится если вы добавите только что созданный объект в `Mutable Array`, и пошлете ему сообщение `release`? Что случится если послать сообщение `release` массиву? Что случится если вы удалите объект из массива и попытаетесь его использовать?
 - С подвохом: как работает `сборщик мусора` в iOS? :)))
 - Нужно ли `ретейнить` (посылать сообщение retain) `делегаты`?
-- Для чего используется класс `NSCoder`?
 - Опишите правильный способ управления памятью выделяемой под `Outlet'ы`?
 
 Networking:
@@ -90,7 +113,6 @@ Networking:
 - Как загрузить что-то из интернета? В чем разница между `синхронными и асинхронными запросами`? Небольшое задание. Опишите как загрузить изображение из интернета и отобразить его в ImageView — все это должно происходить после нажатия кнопки.
 - Что такое REST (Restful)?
 - Какую JSONSerialization имеет ReadingOptions?
-- Объясните различия в SOAP и REST?
 
 Multithreading:
 ---------------
@@ -101,7 +123,6 @@ Multithreading:
 - Что такое обработчик завершения (completion handler)?
 - Что такое параллелизм (concurrency)?
 - Блокировки читателей-писателей (readers-writers lock)?
-- С подвохом: вопрос о несуществующем параметре `atomic`, что он означает? Приведите пример кейса с использованием `atomic`?
 - Как многопоточность работает с `UIKit`?
 - Как запустить селектор в `(фоновом) потоке`?
 - Как запустить `поток (thread)`? Что первым нужно сделать при запуске `потока`?
@@ -115,11 +136,8 @@ Multithreading:
 - Что такое `мьютекс (mutex)`?
 - `Асинхронность` vs `многопоточность`. Чем отличаются?
 - Какие технологии в iOS возможно использовать для работы с потоками. Преимущества и недостатки.
-- Как запустить поток? Что первым нужно сделать при запуске потока? (NSAutoreleasePool - пул автоосвобождения) Что такое runLoop, кодга он используется? (timers, nsurlconnection …)
 - Чем отличается `dispatch_async от dispatch_sync`?
-- Для чего при разработке под iOS использовать `POSIX-потоки`? `pthread_create(&thread, NULL, startTimer, (void *)t);`
-- А чем реально `POSIX-потоки` лучше чем `GCD или NSOperationQueue вместе с NSOperation`? Приходилось ри реально использовать POSIX и как в этом были прюсы? Реально, просто интересно…
- `Use POSIX calls if cross-platform portability is required. If you are writing networking code that runs exclusively in OS X and iOS, you should generally avoid POSIX networking calls, because they are harder to work with than higher-level APIs. However, if you are writing networking code that must be shared with other platforms, you can use the POSIX networking APIs so that you can use the same code everywhere. `
+
 
 UIKit:
 ------
@@ -135,7 +153,6 @@ UIKit:
 - Иерархия наследования UIButton.
 - В чем разница CollectionViews & TableViews?
 - Что такое UIStackView?
-- Какая ваша любимая библиотека визуализации диаграмм (visualize chart library)?
 - Что такое Autolayout?
 
 CoreData, Persistency:
@@ -161,7 +178,6 @@ CoreData, Persistency:
 - Что такое `NSManagedObjectId`? Можем ли мы сохранить его на потом если приложение закроется?
 - Какие `типы хранилищ` поддерживает CoreData?
 - Что такое `ленивая загрузка (lazy loading)`? Что ее связывает с CoreData? Опишите ситуация когда она может быть полезной?
-- Составить SQL запрос на выборку всех проектов  на которых сидит девелопер с id ==3. (Developers:id,name; Projects:id,name; Developers&Projects:project_id,developer_id)?
 
 CoreAnimation, CoreGraphics:
 ----------------------------
@@ -188,48 +204,42 @@ iOS Platform:
 - Какие ограничение есть у платформы tvOS?
 - Что такое Code Coverage (покрытие кода)?
 - Что делает подписание кода (code signing)?
-- Что такое TVMLKit?
 - Что такое ABI?
 - Что такое #keyPath()?
 - Что IGListKit дает разработчикам?
-- Каковы три основных улучшения отладки в Xcode 8?
 - Что такое биткод (bitcode)?
 - Какие есть ограничения (limits) у SiriKit?
-- Что нового в iOS 10?
-- Что такое GraphQL?
-- What is the biggest changes in UserNotifications?
+- Что нового в iOS 12?
 - Как получить токен устройства (device token)?
 - Какие ограничения (limits) у Remote Notifications?
 
 Architecture
 ------------
-- Если вам нужно сделать рефакторинг, с чего бы вы начали?
 - SOLID?
-- Что такое protocol oriented programming?
-- Алгоритмическая сложность (big-o notation)?
-- Что такое `VIPER` архитектура?
-- What is the difference open & public access level?
-- What is the difference fileprivate & private access level?
-- Что такое внутренний доступ (internal access)?
-- Что такое `TDD` vs.`BDD`?
-- Что такое `DDD`?
-- Расскажите о `паттерне MVC`. Чем отличается `пассивная` модель от `активной`?
-- Паттерн `MVC vs MVP vs MVVM`? https://habrahabr.ru/post/215605/
 - Принципы `DRY`?
 - Принципы `KISS`? 
 - Что такое `IoC`? 
+- Что такое protocol oriented programming?
+- What is the difference open & public access level?
+- What is the difference fileprivate & private access level?
+- Что такое внутренний доступ (internal access)?
+- Расскажите о `паттерне MVC`. Чем отличается `пассивная` модель от `активной`?
+- Паттерн `MVC vs MVP vs MVVM`? https://habrahabr.ru/post/215605/
+- Что такое `VIPER` архитектура?
+- Clean Architecture?
+
+Dependency Injection
+--------------------
 - Где мы используем Dependency Injection?
 - Когда подходящее время для внедрения зависимостей (dependency injection) в наши проекты?
-- Explain Priority Inversion and Priority Inheritance?
-- Clean Architecture?
 - Каковы главные цели фреймворков (framework)?
-- Which of the communication methods allows for a loosely coupled, one-to-many pattern and one-to-one pattern?
-- Игра в `разбитые окна`?
 - Объясните разницу между SDK и Framework?
-- В чем недостаток жесткого кодирования? (What is the disadvantage to hard-coding log statements?)
+- Какие библиотеки DI вы знаете?
 
 Unit Testing
------------
+------------
+- Что такое `TDD` vs.`BDD`?
+- Что такое `DDD`?
 - Что такое RGR ( Red — Green — Refactor )?
 - Объясните “Arrange-Act-Assert”?
 - Какие преимущества в написании тестов в приложениях?
@@ -238,39 +248,6 @@ Unit Testing
 - Что такое Continuous Integration?
 - Чем отличается Mock от Stub. (mock - имитация поведения, stub - вводные данные)
 
-Programming:
---------
-- Что такое `куча (heap)` и `стэк (stack)`? В какой памяти создаются объекты, примитивные типы и блоки?
-- Что такое `полиморфизм`?
-- Что такое `инкапсуляция`? Что такое `нарушение инкапсуляции`?
-- Чем `абстрактный класс` отличается от `интерфейса`?
-- Что такое сериализация объекта?
-- Что такое `регулярные выражения` (regular expression)?
-- Что такое `перегрузка операторов (operator overloading)`?
-- Что такое `указатель` (pointer)?
-- Что такое `функция` (function)?
-- Как передавать переменную как ссылку?
-- Что такое `класс`?
-- Что такое `объект`?
-- Что такое `интерфейс`?
-- Когда и почему мы используем объект вместо структур?
-
-General:
---------
-- Ваше любимое видео с WWDC?
-- Какое ваше любимое приложение и почему?
-- Что нового появилось в iOS 10/iOS 9?
-- Что такое парное программирование?
-- Что такое ограничивающая рамка (bounding box)?
-- Сколько есть API'шек для эффективного отслеживания местоположения?
-- Какое самое главное преимущество у Swift?
-- Что делает React Native специальным для iOS?
-- Что означает бритье Яка (Yak Shaving)?
-- Каковы пять основных практических рекомендаций для улучшения типографического качества (typographic quality) мобильных проектов?
-- Что такое Alamofire?
-- Вы раньше работали в качестве подрядчика?Have you worked as a contractor before?
-- Что такое управление зависимостями (Dependency Management)?
-- Что такое диаграммы классов UML?
 
 Паттерны:
 --------
@@ -280,7 +257,6 @@ General:
 - Что такое паттерн `Адаптер` (Adapter)?
 - Что такое паттерн `Наблюдатель` (Observer)?
 - Что такое паттерн `Мементо` (Memento)?
-- Реализация `Cинглтона` (Singleton) в `ARC` и в `non-ARC`?
 - Назовите основные отличия `синглтона` от `статического класса`, и когда следует использовать один, а когда другой? 
 - Как пересоздать синглтон? Можно ли `обнулить объект синглтона`?
 
